@@ -1,0 +1,352 @@
+*
+	box-sizing: border-box
+	font-family: "Arial"
+	margin: 0
+	padding: 0
+
+.container
+	width: 960px
+	margin:
+		left: auto
+		right: auto
+	display: flex
+	position: relative
+	justify-content: space-between
+	@media screen and (max-width: 780px) 
+		width: 780px
+		box-shadow: none
+	@media (max-width: 640px) 
+		width: 640px
+		box-shadow: none
+
+.shadow
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.27)
+
+////////////// HEADER
+.small-menu
+	display: none
+	@media (max-width: 640px) 
+		display: flex
+		align-items: center
+		margin-left: 30px
+		vertical-align: center
+
+
+.header
+	width: 100%
+	height: 60px
+	background-color: #2d313d
+
+.header-logo
+	width: 50%
+	height: 60px
+	line-height: 65px
+	padding-left: 6px
+	@media screen and (max-width: 780px) 
+		padding-left: 26px
+		display: flex
+		align-items: center
+
+.page-title
+	display: none
+	@media screen and (max-width: 640px) 
+		display: flex
+		align-items: center
+		color: #fff
+		font-size: 36px
+		width: 370px
+
+.header-info
+	width: 50%
+	height: 60px
+	padding-right: 6px
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	@media screen and (max-width: 780px) 
+		padding-right: 16px
+	.header-info__city
+		color: #727989
+		margin-right: 5px
+		font-size: 14px
+		border-bottom: 1px dashed #727989
+		@media (max-width: 640px) 
+			display: none
+	.header-info__arrow
+		margin-right: 32px
+		margin-bottom: 3px
+		@media (max-width: 640px) 
+			display: none
+	.header-info__ring
+		margin-right: 28px
+		@media (max-width: 640px) 
+			display: none
+	.header-info__message
+		margin-right: 34px
+		@media (max-width: 640px) 
+			display: none
+	.header-info__name
+		font-size: 14px
+		color: #727989
+		margin-right: 11px
+		@media (max-width: 640px) 
+			display: none
+	.header-info__foto
+		margin-right: 25px
+
+//////////// MENU
+nav
+	width: 100%
+	height: 40px
+	background-color: #646d81
+
+.menu
+	margin: 0
+	padding: 0
+	list-style: none
+	position: absolute
+	bottom: -35px
+	@media (max-width: 780px) 
+		margin-left: 20px
+	.menu-item
+		display: inline-block
+		a
+			display: block
+			line-height: 30px
+			color: #fff
+			font-size: 14px
+			text-decoration: none
+			margin-right: 28px
+			&:hover
+				border-top: 5px solid #fff
+
+////////////// ASIDE MENU
+aside
+	width: 172px
+	border-right: 1px solid #e0e4ed
+	@media (max-width: 640px) 
+		display: none
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+		&:first-child
+			margin-top: 33px
+		li
+			width: 172px
+			padding:
+				left: 29px
+				top: 9px
+				bottom: 9px
+			&:hover
+				border-left: 5px solid #99a1b3
+				padding-left: 24px
+			a
+				text-decoration: none
+				color: #99a1b3
+				font-size: 14px
+	h3
+		font-size: 18px
+		margin-top: 39px
+		margin-left: 29px
+
+// /////////////// CONTENT
+main 
+	width: 100%
+	.title
+		display: flex
+		height: 85px
+		align-items: center
+		@media screen and (max-width: 640px)
+			justify-content: center
+		h1
+			font-size: 36px
+			font-family: "Georgia"
+			margin-left: 30px
+			margin-right: 33px
+			font-weight: normal
+		span 
+			font-size: 36px
+			font-family: "Georgia"
+			border-bottom: 1px dashed #2d313d
+			margin-right: 1px
+	.search
+		display: flex
+		height: 50px
+		background-color: #f2f4f8
+		align-items: center
+		@media screen and (max-width: 640px)
+			display: flex
+			justify-content: space-between
+			height: 100px
+		.img-search
+			display: none
+			@media screen and (max-width: 640px) 
+				display: block
+				margin-left: 50px
+				margin-top: 5px
+			img 
+				@media screen and (max-width: 640px)
+					width: 40px
+					height: 43px
+		input
+			width: 280px
+			height: 40px
+			margin-left: 30px
+			border-radius: 3px
+			border: 1px solid #d6d9e1
+			padding-left: 10px
+			color: #a1a8b9
+			background-image: url('../../images/search.png')
+			background-repeat: no-repeat
+			background-position: right 10px top 8px
+			margin-right: 260px
+			@media screen and (max-width: 780px) 
+				margin-right: 70px
+			@media screen and (max-width: 640px) 
+				display: none
+		p
+			margin-right: 88px
+			color: #99a1b3
+			font-family: "Georgia"
+			@media screen and (max-width: 640px) 
+				display: none
+			&:before
+				content: "+"
+				margin-right: 7px
+		.mob-menu
+			@media screen and (max-width: 640px)
+				margin-right: 50px
+				&:before
+					content: url('../../images/plus.png')
+			img 
+				@media screen and (max-width: 640px)
+					width: 45px
+					height: 35px
+					margin-left: 40px
+	.content
+		section 
+			display: flex
+			padding: 35px 35px 30px
+			&:first-child
+				padding-bottom: 0
+			&:last-child
+				padding-top: 0
+			.user-foto
+				margin-right: 15px
+			.user-description
+				.user-info
+					display: flex
+					position: relative
+					.user-name
+						color: #99a1b3
+						margin-right: 42px
+						font-size: 12px
+					.user-status
+						text-align: center
+						font-size: 12px
+						color: #99a1b3
+						background-color: #f2f4f8
+						border-radius: 3px
+						padding: 7px 15px 5px 16px
+						margin-top: -7px
+					.user-add
+						display: flex
+						position: absolute
+						right: 11px
+						top: 0
+						div
+							color: #99a1b3
+							&:first-child
+								margin-right: 8px
+								@media screen and (max-width: 780px)
+									display: none
+						img 
+							margin-right: 3px
+				.item-title
+					font-size: 16px
+					font-weight: bold
+					color: #4f9cd4
+					margin-bottom: 3px
+					margin-top: 5px
+					img 
+						margin-left: 540px
+						@media screen and (max-width: 780px)
+							display: none
+				.tags
+					display: flex
+					margin-top: 17px
+					div 
+						margin-right: 8px
+					p 
+						color: #99a1b3
+
+.buttons
+	display: flex
+	justify-content: center
+	margin-bottom: 30px
+	.btn
+		border: 1px solid #99a1b3
+		border-radius: 3px
+		position: relative
+		&:hover
+			cursor: pointer
+		img 
+			position: absolute
+			top: 15px
+	.btn-l
+		padding: 15px 20px 15px 35px
+		margin-right: 10px
+		img 
+			left: 15px
+	.btn-r
+		padding: 15px 35px 15px 20px
+		img 
+			right: 15px
+
+
+//////////// BOTTOM MENU
+.bottom-nav
+	background-color: #f2f4f8
+	height: 45px
+	padding-left: 30px
+	margin-bottom: 1px
+	@media screen and (max-width: 640px)
+		height: 82px
+		display: flex
+		align-items: center
+		justify-content: space-around
+		padding-left: 0
+		margin-bottom: 0
+	.bottom-menu
+		margin: 0
+		padding: 0
+		list-style: none
+		.menu-item
+			display: inline-block
+			a
+				display: block
+				line-height: 45px
+				color: #99a1b3
+				font-size: 12px
+				text-decoration: none
+				margin-right: 22px
+				@media screen and (max-width: 640px)
+					font-size: 24px
+				&:hover
+					color: #142975
+
+/////////// FOOTER
+footer
+	display: flex
+	background-color: #f2f4f8
+	height: 45px
+	padding-left: 30px
+	align-items: center
+	@media screen and (max-width: 640px)
+		display: none
+	div
+		margin-right: 15px
+	p
+		color: #99a1b3
+		font-size: 12px
